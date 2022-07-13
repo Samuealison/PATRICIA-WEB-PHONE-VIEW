@@ -366,8 +366,17 @@ margin-bottom: 20px;
 }
 
 .paty-people{
-    padding: 20px 20px 60px 20px;
+    padding: 20px 20px 20px 20px;
     
+}
+.paty-people p{
+    background-color: #fff;
+    box-shadow:0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04);
+    border-radius: 0.75rem;
+    padding: 2rem 0 2rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(0,97,86,1); 
 }
 
 @media only screen and (min-width: 768px){
@@ -379,6 +388,12 @@ margin-bottom: 20px;
         .oxygen-text p{
           width:34%;  
         }
+
+        .paty-people p{
+         font-size: 2rem;
+         font-weight: 700;
+         padding: 2.5rem 0 3rem 2rem;
+         }
         
 }    
         
@@ -410,13 +425,16 @@ margin-bottom: 20px;
     }
     
     .paty-people{
-        padding: 20px 0 60px 0;
+        padding: 20px 0 0px 0;
     }  
 
     .oxygen-container{
         padding: 20px 50px;
         }
         
+        .paty-people p{
+            width: 79%;
+            }  
 }
 
 
@@ -743,7 +761,14 @@ padding: 0 50px 20px 0;
 }
 
 .do-more-container{
-    padding: 60px 0;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.do-more-left{
+
 }
 
 .do-more-text h1{
@@ -751,7 +776,6 @@ padding: 0 50px 20px 0;
     line-height: 40px;  
     margin-bottom: 30px;
     font-weight:bold;
-    padding-left: 20px;
 }
 
 .do-more-text p{
@@ -760,7 +784,6 @@ padding: 0 50px 20px 0;
     margin-bottom: 30px;
     line-height: 20px; 
     font-weight: 700; 
-    padding-left: 20px;
 }
 
 .do-more-card-wrapper{
@@ -770,10 +793,8 @@ padding: 0 50px 20px 0;
     background-color: rgba(255,25/5,255,1);
     z-index: 3;
     margin-bottom: 25px;
-    margin-right: 100px;
-    margin-left: 20px;
-    
-    }
+    box-sizing: border-box;
+}
 
 .more-mr-flex{
     display: flex;
@@ -792,47 +813,45 @@ display: block;
 }
 
 .mtn {
-    max-width: 130px;
-    margin-right: 10px;
+    max-width: 14rem;
+    
 }
 
 .buy-airtime{
-    max-width: 130px;
+    max-width: 14rem;
   
 }
 
 
 .do-more-right{
-    padding: 50px 10px 0 40px;
     position: relative;
     background-image: url(img/46ba6fad676c644a0e7528079da40846.svg);
     background-repeat: no-repeat;
-    background-size:70px;
-    background-position: 14rem 1rem;
+    background-size:18%;
+    background-position:  top;
+
 }
 
 .more-flex{
-    display: flex;
-    justify-content: center;
+   display: grid;
+justify-content: center;
+   grid-template-columns: 1fr 1fr;
+   gap: 1rem;
     position: relative;
+    top: 4rem;
+   grid-template-columns: repeat(2,minmax(0,1fr));
 }
 
 
 .do-more-coin{
-    width: 50px; 
-    position: relative;
-    right: 27rem;
-     bottom: 10rem;
-
+   width: 5rem; 
+    position: absolute;
+    left: -2rem;
 }
 
 
 
 @media only screen and (min-width: 768px){
-    .do-more-container{
-        padding: 60px 10px 0 0;
-    }
-    
     .do-more-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -841,15 +860,15 @@ display: block;
     .do-more-text h1{
         font-size: 4rem;
         line-height: 4.5rem;  
-        margin-bottom: 30px;
+        margin-bottom: 3rem;
         font-weight:bold;
-        padding-left: 20px;
+        
     }
     .do-more-text p{
         color:rgba(157,168,182,1); 
         line-height: 20px; 
         font-weight: 700; 
-        margin: 20px 80px 30px 10px;
+        margin: 20px 80px 30px 0;
     }
     .do-more-card-wrapper{
         box-shadow:0 0 #0000 ;
@@ -857,9 +876,8 @@ display: block;
         box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1),0 1px 2px 0 rgba(0,0,0,0.06);
         background-color: rgba(255,25/5,255,1);
         /* z-index: 3; */
-        margin-bottom: 30px;
         margin-right: 0;
-        margin-left: 20px;
+    
         
         }
 
@@ -869,92 +887,75 @@ display: block;
         padding: 5px;
         border-radius: 30px;
         align-items: center;
-        justify-content: center;
+        
     }
     
     
-    .mtn {
-        max-width: 140px;
-        margin-right: 10px;
+    /* .mtn {
+        max-width: 16rem;
     }
     
     .buy-airtime{
-        max-width: 140px;
+      max-width: rem;
     }
-    
+     */
 
     .more-flex{
         width: 100%;
-        display: flex;
-        justify-content: center;
+      
     }
 
-    .do-more-right{
-        padding: 50px 10px 20px 40px;
-        background-size:80px;
-        background-position: 14rem 0;
+    .do-more-left{
+     padding-right: 4rem;   
     }
+    .do-more-coin{
+        top: -1rem; 
+     }
+     
     }
 
 
 @media only screen and (min-width: 1024px){
-    .do-more-text h1{
-        font-size: 8rem;
-        line-height: 8.5rem; 
-        margin-bottom: 30px;
-        font-weight:bold;
-        padding-left: 20px;
-    }
-
-    .do-more-text p{
-        color:rgba(157,168,182,1); 
-        margin-top: 20px;
-        margin-bottom: 30px;
-        line-height:3rem; 
-        font-size: 2.5rem;
-        font-weight: 400;
-        padding-left: 20px;
-    }
-
-    .do-more-card-wrapper p{
-        font-size: 2rem;
-        font-weight: 700;
-        padding-left: 10px;
-    }
-
     .mtn {
-        max-width: 200px;
-        margin-right: 10px;
+        max-width: 100%;
     }
     
     .buy-airtime{
-        max-width: 200px;
-       
-    }
-    
-
-    .more-flex{
-        width: 100%;
+      max-width: 100%;
     }
 
-    .do-more-right{
-        padding: 50px 10px 20px 40px;
-        background-size:100px;
-        background-position: 22rem  0;
-    }
-    
-    
     .do-more-coin{
-        width: 8rem; 
-        position: relative;
-        right: 40rem;
-        bottom: 17rem;
-    
+        width: 7rem;
+     }
+
+     .do-more-text h1{
+        font-size: 7rem;
+        line-height: 7.5rem;  
+        margin-bottom: 3.5rem;
+        }
+
+.do-more-text p{
+        font-size: 2rem;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+        line-height: 3rem; 
+        font-weight: 500; 
     }
-    
 
+    .do-more-card-wrapper{
+        margin-bottom: 3rem;
+        border-radius: 3rem;
+        margin-right: 5rem;       
+    }
 
+    .do-more-card-wrapper p{
+        font-weight: 900;
+        padding: 2.2rem;
+        font-size: 2rem;
+        
+    }
 }
+  
 
 
 
@@ -1823,10 +1824,11 @@ padding: 20px 20px;
 .newsletter-pht{
 text-align: center;
 margin-bottom: 10px;
+
 }
 
 .news-pht{
-    max-width: 50px
+max-width: 50px;
 }
 
 .newsletter-card{
@@ -1834,13 +1836,13 @@ margin-bottom: 10px;
     padding: 40px 25px;
     background-image: url(img/0d5cf744b7378041b4fa0b458ea7c1d8.svg);
     border: 0px solid #e5e7eb;
-    padding: 0 0 30px;
+    /* padding: 0 0 30px; */
     border-radius: 15px;
     box-shadow: 0 1px 1px 1px;
 }
 
 .card-letters{
-    padding:40px 25px;
+  
 }
 
 .newsletter-card h4{
@@ -1875,7 +1877,7 @@ margin-bottom: 10px;
     border: 1px  solid #fff;
     border-radius: 10px;
     margin-right: 10px;
-    padding: 10px;
+    padding: 1rem;
       
 }
 
@@ -1889,7 +1891,7 @@ margin-bottom: 10px;
     background-color: #000;
     color: #fff;
     border-radius: 10px;
-    padding: 15px;
+    padding:1.2rem;
 }
 
 
@@ -1936,7 +1938,7 @@ margin-bottom: 10px;
     border: 1px  solid #fff;
     border-radius: 10px;
     margin-right: 0px;
-    padding: 15px 100px 15px 15px;
+    /* padding: 15px 100px 15px 15px; */
       
 }
 
@@ -1951,13 +1953,13 @@ margin-bottom: 10px;
     background-color: #000;
     color: #fff;
     border-radius: 10px;
-    padding: 15px ;
+    padding: 1.2rem ;
 }
 
 }
 
 
-@media only screen and (min-width: 10px){
+@media only screen and (min-width: 1024px){
     .newsletter-container{
         padding: 20px 80px;
         }
@@ -1991,20 +1993,25 @@ margin-bottom: 10px;
 
 /* FULL PICTURE */
 .full-pic{ 
-  /* margin-top: 20px; */
-}
-
-.g-full{
-    
+    width: 100%;
 }
 
 .d-guy{
     object-position: center;
     width: 100%;
     object-fit: cover;
-  height: 16rem;
+     height: 16rem;
 }
 
+
+
+@media only screen and (min-width: 1024px){
+.d-guy{
+    width: 100%;
+    object-fit: cover;
+     height: 100%;
+}   
+}
 
 
 
